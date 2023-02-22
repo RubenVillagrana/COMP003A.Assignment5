@@ -18,9 +18,7 @@ namespace PrintSeparator
 
             static void Main(string[] args)
             {
-
-
-
+                
                 Console.WriteLine("**************************************************************");
                 Console.WriteLine("Triangle Section");
                 Console.WriteLine("*************************************************************");
