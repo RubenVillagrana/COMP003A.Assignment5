@@ -1,61 +1,66 @@
-﻿/*
- * Author: Ruben Villagrana
- * Course: COMP-003A
- * Purpose: Assignment 4 Code
+﻿/* Author: Ruben Villagrana
+ * Course: COMP003A
+ * Purpose: Methods and XML comments Assignment5
  */
-using System;
-using System.Security.Cryptography.X509Certificates;
-
-namespace PrintSeparator
-
+namespace COMP003A.Assignment5
 {
-    class Program
+    internal class Program
     {
-        //PrintSeparator with no output set up outside of the main
-        static void PrintSeparator(int N)
-
+        static void Main(string[] args)
         {
+            PrintSeparator("Triangle");
+            IsoscelesTriangleBuilder('/' , 10);
 
+            //Console.WriteLIne(AgeCalculator
+            Console.WriteLine("******************************************************");
+            Console.WriteLine("Triangle Section");
+            Console.WriteLine("*******************************************************");
+        }
+        static void PrintSeparator()
+        {
+            Console.WriteLine("".PadRight(50, '*'));
+        }
 
-            static void Main(string[] args)
+        static void PrintSeparator(string title)
+        {
+            PrintSeparator();
+            Console.WriteLine($"\t{title} Section.");
+            PrintSeparator();
+
+        }
+
+        static void IsoscelesTriangleBuilder(char inputCharacter, int size)
+        {
+            string output = "";
+            //increasing 
+            for (int i = 0; i < size; i++)
             {
+                output += inputCharacter;
+                Console.WriteLine(output);
+                //Console.WriteLine("".PadRight(i, inputCharacter));
+            }
 
-                Console.WriteLine("**************************************************************");
-                Console.WriteLine("Triangle Section");
-                Console.WriteLine("*************************************************************");
-                Console.WriteLine("Enter a Single Character:");
-                Console.WriteLine("Enter a Positive Whole Number");
+            //decreasing
+            for (int i = size - 1; i > 0; i--)
+            {
+                output = output.Substring(0, i);
+                Console.WriteLine(output);
 
-                
-                        int i, j;
-                        int N = 50;
-                        // Loop to print the upper half
-                        // diamond pattern
-                        for (i = 0; i < N; i++)
-                        {
-                            for (j = 0; j < i + 1; j++)
-                                Console.Write("*");
-                            Console.Write("\n");
-                        }
 
-                        // Loop to print the lower half
-                        // diamond pattern
-                        for (i = 1; i < N; i++)
-                        {
-                            for (j = i; j < N; j++)
-                                Console.Write("*");
-                            Console.Write("\n");
-                        }
-                    }
-                }
             }
         }
+    }
+}
+
+
+
+   
+            
+            
+            
+            
+
+
+      
     
 
-
-
-
- 
-
-
-    
